@@ -2930,6 +2930,9 @@ if($user->isLoggedIn()) {
 </script>
 
 <script>
+if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
     $(document).ready(function(){
         $('#BE').change(function(){
             var getEye1 = $(this).val();

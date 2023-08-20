@@ -108,7 +108,7 @@ class OverideData{
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
-    public function getLike($table,$where,$id){
+     public function getLike($table,$where,$id){
         $query = $this->_pdo->query("SELECT * FROM $table WHERE $where LIKE '%$id%'");
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
         return $result;
