@@ -59,7 +59,7 @@ out/
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
-php/core/*.php
+# php/core/init.php
 
 # JIRA plugin
 atlassian-ide-plugin.xml
