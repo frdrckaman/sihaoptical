@@ -1,6 +1,7 @@
 <?php
 require_once'php/core/init.php';
 $user = new User();
+$random = new Random();
 $override = new OverideData();
 $pageError = null;$successMessage = null;$errorM = false;$errorMessage = null;$accessLevel=0;
 if($user->isLoggedIn()){
@@ -154,7 +155,7 @@ if($user->isLoggedIn()){
                 }
             }
             elseif(Input::get('resetPassword')){
-                $salt = Hash::salt(32);
+                $salt = $random->get_rand_alphanumeric(32);
                 $password = '123456';
                 try{
                     $user->updateRecord('staff',array(

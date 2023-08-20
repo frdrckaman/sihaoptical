@@ -1,6 +1,7 @@
 <?php
 require_once'php/core/init.php';
 $user = new User();
+$random = new Random();
 $override = new OverideData();
 $pageError = null;$successMessage = null;$errorM = false;$errorMessage = null;$accessLevel=0;$smsV=false;
 $totalSMS=0;$bundle=null;$sms=0;$checkError=false;$attachment_file='';$attachment=null;$file_attach=null;
@@ -40,7 +41,7 @@ if($user->isLoggedIn()) {
                             ),
                         ));
                         if ($validate->passed()) {
-                            $salt = Hash::salt(32);
+                            $salt = $random->get_rand_alphanumeric(32);
                             $password = '123456';
                             switch(Input::get('position')){
                                 case 'admin':

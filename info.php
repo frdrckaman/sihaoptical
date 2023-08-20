@@ -1,6 +1,7 @@
 <?php
 require_once'php/core/init.php';
 $user = new User();
+$random = new Random();
 $override = new OverideData();
 $pageError = null;$successMessage = null;$errorM = false;$errorMessage = null;$accessLevel=0;
 $total_orders=0;$pending=0;$confirmed=0;$received=0;$RE=null;$LE=null;$message=null;
