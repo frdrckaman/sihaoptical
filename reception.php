@@ -171,7 +171,7 @@ if($user->isLoggedIn()){
                                                         </div>
                                                         <label class="col-md-1"></label>
                                                         <div class="col-md-2">
-                                                            <input name="age" type="text"  class="form-control" placeholder="AGE" value="<?=Input::get('age')?>">
+                                                            <input name="age" type="number"  class="form-control" placeholder="AGE" value="<?=Input::get('age')?>">
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
